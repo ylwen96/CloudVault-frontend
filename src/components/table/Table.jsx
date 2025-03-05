@@ -43,11 +43,12 @@ export default function TableComponent() {
   const fetchData = useCallback(async () => {
     try {
       const data = await getUserFilesExpanded(user);
+      console.log(data)
       if (typeof data != "undefined") {
         let arr = [];
-        for (let i = 0; i < data.Files.length; i++) {
+        for (let i = 0; i < data.files.length; i++) {
           // let obj = { index: i + 1, ...data.Files[i] };
-          let obj = data.Files[i];
+          let obj = data.files[i];
           arr.push(obj);
         }
         arr.sort((a, b) => {
@@ -59,7 +60,7 @@ export default function TableComponent() {
         });
         setData(arr);
       }
-    } catch (error) {}
+    } catch (error) { }
   }, [user]);
 
   useEffect(() => {
@@ -67,7 +68,7 @@ export default function TableComponent() {
   }, [fetchData]);
 
   const handleViewClick = (id) => {
-    navigate(`/Files/${id}`);
+    navigate(`/drive/files/${id}`);
   };
 
   const handleAddClick = (event) => {
@@ -223,7 +224,6 @@ export default function TableComponent() {
             height: 530,
             bgcolor: "background.paper",
             boxShadow: 24,
-            // padding: "44px 51px",
           }}
           className="form-container"
         >
