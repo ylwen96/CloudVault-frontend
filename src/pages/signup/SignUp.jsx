@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import { signUp } from "../../util/auth";
 import ConfirmSignUpForm from "../confirmSignUpForm/ConfirmSignUpForm";
+import LogoImage from "../../assets/logo.png"
 
 const SignUp = () => {
   const [username, setUsername] = useState("");
@@ -105,7 +106,7 @@ const SignUp = () => {
             </Alert>
           )}
           {signUpError && <Alert severity="error">Sign in error</Alert>}
-
+          <img src={LogoImage} alt="logo-icon" />
           <form onSubmit={handleFormSubmit} className="signup-form">
             <TextField
               required

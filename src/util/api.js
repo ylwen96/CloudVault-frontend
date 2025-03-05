@@ -12,7 +12,7 @@ const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:8080';
 export async function getUserFiles(user) {
   console.log('Requesting user Files data...');
   try {
-    const res = await fetch(`${apiUrl}/v1/Files`, {
+    const res = await fetch(`${apiUrl}/drive/files`, {
       // Generate headers with the proper Authorization bearer token to pass
       headers: {
         'Content-Type': 'application/json',
@@ -26,14 +26,14 @@ export async function getUserFiles(user) {
     // console.log('Got user Files data', { data });
     return data
   } catch (err) {
-    console.error('Unable to call GET /v1/File', { err });
+    console.error('Unable to call GET /drive/files', { err });
   }
 }
 
 // GET expanded Files
 export async function getUserFilesExpanded(user) {
   try {
-    const res = await fetch(`${apiUrl}/v1/Files?expand=1`, {
+    const res = await fetch(`${apiUrl}/drive/files?expand=1`, {
       // Generate headers with the proper Authorization bearer token to pass
       headers: {
         'Content-Type': 'application/json',
@@ -47,14 +47,14 @@ export async function getUserFilesExpanded(user) {
     // console.log('Got user Files expanded data', { data });
     return data
   } catch (err) {
-    console.error('Unable to call GET /v1/Files', { err });
+    console.error('Unable to call GET /drive/files', { err });
   }
 }
 
 // GET File
 export async function getFileById(user, id) {
   try {
-    const res = await fetch(`${apiUrl}/v1/Files/${id}`, {
+    const res = await fetch(`${apiUrl}/drive/files/${id}`, {
       // Generate headers with the proper Authorization bearer token to pass
       headers: {
         // 'Content-Type': 'application/json',
@@ -74,7 +74,7 @@ export async function getFileById(user, id) {
     }
     return data
   } catch (err) {
-    console.error('Unable to call GET /v1/Files', { err });
+    console.error('Unable to call GET /drive/files', { err });
     return null
   }
 }
@@ -82,7 +82,7 @@ export async function getFileById(user, id) {
 // GET File with Info
 export async function getFileInfoById(user, id) {
   try {
-    const res = await fetch(`${apiUrl}/v1/Files/${id}/info`, {
+    const res = await fetch(`${apiUrl}/drive/files/${id}/info`, {
       // Generate headers with the proper Authorization bearer token to pass
       headers: {
         'Content-Type': 'application/json',
@@ -96,7 +96,7 @@ export async function getFileInfoById(user, id) {
     // console.log('Got user Files expanded data', { data });
     return data
   } catch (err) {
-    console.error('Unable to call GET /v1/Files', { err });
+    console.error('Unable to call GET /drive/files', { err });
     return null
   }
 }
@@ -105,7 +105,7 @@ export async function getFileInfoById(user, id) {
 export async function postUserFiles(user, type, content) {
   console.log("User just post a '", type, "' File");
   try {
-    const res = await fetch(`${apiUrl}/v1/Files`, {
+    const res = await fetch(`${apiUrl}/drive/files`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${user.idToken}`,
@@ -119,7 +119,7 @@ export async function postUserFiles(user, type, content) {
     const data = await res.json();
     console.log('Post user Files data', { data });
   } catch (err) {
-    console.error('Unable to call POST /v1/Files', { err });
+    console.error('Unable to call POST /drive/files', { err });
   }
 }
 
@@ -127,7 +127,7 @@ export async function postUserFiles(user, type, content) {
 export async function putUserFiles(user, id, type, content) {
   console.log("User just put a '", id, "' File");
   try {
-    const res = await fetch(`${apiUrl}/v1/Files/${id}`, {
+    const res = await fetch(`${apiUrl}/drive/files/${id}`, {
       method: "PUT",
       headers: {
         Authorization: `Bearer ${user.idToken}`,
@@ -139,7 +139,7 @@ export async function putUserFiles(user, id, type, content) {
       throw new Error(`${res.status} ${res.statusText}`);
     }
   } catch (err) {
-    console.error('Unable to call PUT /v1/Files', { err });
+    console.error('Unable to call PUT /drive/files', { err });
   }
 }
 
@@ -147,7 +147,7 @@ export async function putUserFiles(user, id, type, content) {
 export async function deleteUserFiles(user, id) {
   console.log("User just delete a '", id, "' File");
   try {
-    const res = await fetch(`${apiUrl}/v1/Files/${id}`, {
+    const res = await fetch(`${apiUrl}/drive/files/${id}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${user.idToken}`,
@@ -157,7 +157,7 @@ export async function deleteUserFiles(user, id) {
       throw new Error(`${res.status} ${res.statusText}`);
     }
   } catch (err) {
-    console.error('Unable to call DELETE /v1/Files', { err });
+    console.error('Unable to call DELETE /drive/files', { err });
   }
 }
 
@@ -194,7 +194,7 @@ export async function convertUserFiles(user, id, type) {
       default:
         break;
     }
-    const res = await fetch(`${apiUrl}/v1/Files?${id}${type_ext}`, {
+    const res = await fetch(`${apiUrl}/drive/files?${id}${type_ext}`, {
       // Generate headers with the proper Authorization bearer token to pass
       headers: {
         'Content-Type': 'application/json',
@@ -205,6 +205,6 @@ export async function convertUserFiles(user, id, type) {
       throw new Error(`${res.status} ${res.statusText}`);
     }
   } catch (err) {
-    console.error('Unable to call GET to convert /v1/File', { err });
+    console.error('Unable to call GET to convert /drive/files', { err });
   }
 }

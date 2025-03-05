@@ -30,8 +30,8 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      <Typography variant="h5" component="div" className="home-title">
-        Welcome Aboard Captain, you are signed in as "{user && user.username}"!
+      <Typography variant="h5" component="div" className="home-title" align="center">
+        Welcome to CloudValut, "{user && user.username}" ʕง•ᴥ•ʔง
       </Typography>
       <div className="table-container">
         <TableComponent user={user} />

@@ -12,6 +12,7 @@ import { signIn } from "../../util/auth";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setUserSignIn } from "../../redux/auth/authSlice";
+import LogoImage from "../../assets/logo.png"
 
 const Login = () => {
     const [username, setUsername] = useState("");
@@ -72,6 +73,7 @@ const Login = () => {
                         Login error, please check your credentials
                     </Alert>
                 )}
+                <img src={LogoImage} alt="logo-icon" />
                 <form onSubmit={handleFormSubmit} className="login-form">
                     <TextField
                         required
