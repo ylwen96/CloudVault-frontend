@@ -2,9 +2,9 @@
 export const defaultStorageExpirationDate = 1 / 24;
 
 export const StorageTypes = {
-    ID_TOKEN_STORAGE: 'fragments_ID_TOKEN_STORAGE',
-    USERNAME_STORAGE: 'fragments_USERNAME_STORAGE',
-    ACCESS_TOKEN_STORAGE: 'fragments_ACCESS_TOKEN_STORAGE',
+    ID_TOKEN_STORAGE: 'Files_ID_TOKEN_STORAGE',
+    USERNAME_STORAGE: 'Files_USERNAME_STORAGE',
+    ACCESS_TOKEN_STORAGE: 'Files_ACCESS_TOKEN_STORAGE',
 }
 
 export const readStorage = (name) => {
