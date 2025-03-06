@@ -3,11 +3,6 @@
 // Files microservice API, defaults to localhost:8080
 const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:8080';
 
-/**
- * Given an authenticated user, request all Files for this user from the
- * Files microservice (currently only running locally). We expect a user
- * to have an `idToken` attached, so we can send that along with the request.
- */
 // GET Files
 export async function getUserFiles(user) {
   console.log('Requesting user Files data...');
@@ -23,7 +18,6 @@ export async function getUserFiles(user) {
       throw new Error(`${res.status} ${res.statusText}`);
     }
     const data = await res.json();
-    // console.log('Got user Files data', { data });
     return data
   } catch (err) {
     console.error('Unable to call GET /drive/files', { err });
@@ -44,7 +38,6 @@ export async function getUserFilesExpanded(user) {
       throw new Error(`${res.status} ${res.statusText}`);
     }
     const data = await res.json();
-    // console.log('Got user Files expanded data', { data });
     return data
   } catch (err) {
     console.error('Unable to call GET /drive/files', { err });
@@ -93,7 +86,6 @@ export async function getFileInfoById(user, id) {
       throw new Error(`${res.status} ${res.statusText}`);
     }
     const data = await res.json();
-    // console.log('Got user Files expanded data', { data });
     return data
   } catch (err) {
     console.error('Unable to call GET /drive/files', { err });

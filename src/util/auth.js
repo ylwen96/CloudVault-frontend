@@ -22,8 +22,6 @@ Amplify.configure({
       // These scopes must match what you set in the User Pool for this App Client
       scope: ['email', 'profile', 'openid'],
 
-      // NOTE: these must match what you have specified in the Hosted UI
-      // app settings for Callback and Redirect URLs (e.g., no trailing slash).
       redirectSignIn: process.env.REACT_APP_OAUTH_SIGN_IN_REDIRECT_URL,
       redirectSignOut: process.env.REACT_APP_OAUTH_SIGN_OUT_REDIRECT_URL,
 
@@ -39,8 +37,7 @@ Amplify.configure({
  */
 async function getUser() {
   try {
-    // Get the user's info, see:
-    // https://docs.amplify.aws/lib/auth/advanced/q/platform/js/#identity-pool-federation
+    // Get the user's info
     const currentAuthenticatedUser = await Auth.currentAuthenticatedUser();
 
     // Get the user's username
@@ -48,7 +45,6 @@ async function getUser() {
 
     // Get the user's Identity Token, which we'll use later with our
     // microservice. See discussion of various tokens:
-    // https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-using-tokens-with-identity-providers.html
     const idToken = currentAuthenticatedUser.signInUserSession.idToken.jwtToken;
     const accessToken = currentAuthenticatedUser.signInUserSession.accessToken.jwtToken;
 
