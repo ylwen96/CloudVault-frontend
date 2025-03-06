@@ -19,6 +19,7 @@ const SignUp = () => {
   const [confirmedPassword, setConfirmedPassword] = useState("");
   const [emailError, setEmailError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
+  const [passwordSpecialCharacterError, setPasswordSpecialCharacterError] = useState(false);
   const [confirmedPasswordError, setConfirmedPasswordError] = useState(false);
   const [signUpError, setSignUpError] = useState(false);
   const [confirmSignUp, setConfirmSignUp] = useState(false);
@@ -54,6 +55,9 @@ const SignUp = () => {
     if (!validatePassword(password)) {
       setPasswordError(true);
     }
+    if (!validatePasswordCharacter(password)) {
+      setPasswordSpecialCharacterError(true);
+    }
     if (!validateConfirmedPassword(confirmedPassword)) {
       setConfirmedPasswordError(true);
     }
@@ -78,6 +82,10 @@ const SignUp = () => {
     return password.length >= 8 && password.length <= 16;
   };
 
+  const validatePasswordCharacter = (password) => {
+    return /[!@#$%^&*(),.?":{}|<>]/.test(password)
+  };
+
   const validateConfirmedPassword = (confirmedPassword) => {
     return confirmedPassword === password;
   };
@@ -97,6 +105,11 @@ const SignUp = () => {
           {passwordError && (
             <Alert severity="error">
               Please enter a password between 8 to 16 characters.
+            </Alert>
+          )}
+          {passwordSpecialCharacterError && (
+            <Alert severity="error">
+              Please enter a password that at least contain 1 special character.
             </Alert>
           )}
           {confirmedPasswordError && (
