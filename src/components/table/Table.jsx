@@ -43,7 +43,6 @@ export default function TableComponent() {
   const fetchData = useCallback(async () => {
     try {
       const data = await getUserFilesExpanded(user);
-      console.log(data)
       if (typeof data != "undefined") {
         let arr = [];
         for (let i = 0; i < data.files.length; i++) {
@@ -150,10 +149,10 @@ export default function TableComponent() {
         <TableHead>
           <TableRow>
             {/* <TableCell>Index</TableCell> */}
-            <TableCell>ID</TableCell>
+            <TableCell>File ID</TableCell>
             <TableCell align="right">Created At</TableCell>
             <TableCell align="right">Updated At</TableCell>
-            <TableCell align="right">Size</TableCell>
+            <TableCell align="right">Size (B)</TableCell>
             <TableCell align="right">Type</TableCell>
             <TableCell align="right">
               <Button variant="contained" onClick={handleAddClick}>

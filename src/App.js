@@ -26,7 +26,7 @@ function App() {
       <Routes>
         <Route element={<PrivateRoutes />}>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/files/:id" element={<File />} />
+          <Route exact path="/drive/files/:id" element={<File />} />
         </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />

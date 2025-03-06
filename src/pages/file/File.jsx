@@ -43,12 +43,12 @@ const File = () => {
         const response1 = await getFileById(user, id);
         const response2 = await getFileInfoById(user, id);
         setData(response1);
-        setDataInfo(response2.File);
+        setDataInfo(response2.file);
         if (
-          response2.File.type === "image/png" ||
-          response2.File.type === "image/jpeg" ||
-          response2.File.type === "image/webp" ||
-          response2.File.type === "image/gif"
+          response2.file.type === "image/png" ||
+          response2.file.type === "image/jpeg" ||
+          response2.file.type === "image/webp" ||
+          response2.file.type === "image/gif"
         ) {
           setIsImage(response1);
         }
