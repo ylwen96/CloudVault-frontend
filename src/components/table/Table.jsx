@@ -46,8 +46,8 @@ export default function TableComponent() {
       if (typeof data != "undefined") {
         let arr = [];
         for (let i = 0; i < data.files.length; i++) {
-          // let obj = { index: i + 1, ...data.Files[i] };
-          let obj = data.files[i];
+          let obj = { index: i + 1, ...data.files[i] };
+          // let obj = data.files[i];
           arr.push(obj);
         }
         arr.sort((a, b) => {
@@ -148,7 +148,7 @@ export default function TableComponent() {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            {/* <TableCell>Index</TableCell> */}
+            <TableCell>Index</TableCell>
             <TableCell>File ID</TableCell>
             <TableCell align="right">Created At</TableCell>
             <TableCell align="right">Updated At</TableCell>
@@ -170,9 +170,9 @@ export default function TableComponent() {
                   key={row.index}
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                 >
-                  {/* <TableCell component="th" scope="row">
+                  <TableCell component="th" scope="row">
                     {row.index}
-                  </TableCell> */}
+                  </TableCell>
                   <TableCell component="th" scope="row">
                     {row.id}
                   </TableCell>
