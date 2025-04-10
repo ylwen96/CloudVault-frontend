@@ -38,17 +38,32 @@ Youtube Link: https://youtu.be/gQXxX0mSVQc
  
 Backend API: [https://github.com/yuelin-wen/fragments-backend](https://github.com/yuelinwen/CloudVault-backend)
 
+## Installation
+Install npm dependencies
+ 
+ ```bash
+   npm init
+ ```
+ Create .env file, paste environment variables info and place it under root folder
+ ```bash
+   touch .env
+ ```
+ Start project
+ ```bash
+   npm start
+ ```
+
 ## Preview
 
-Fragments list
+File list
 
 ![image](https://github.com/yuelin-wen/fragments-frontend/assets/102840218/59961b03-f4ce-437a-9c01-53d25bf2ca72)
 
-Create Fragment
+Create File
 
 ![WX20230913-122350](https://github.com/yuelin-wen/fragments-frontend/assets/102840218/c9e39091-11e3-41ae-b77a-c2b8349dbc2c)
 
-Read fragment (Update/Delete)
+Read file (Update/Delete)
 
 ![WX20230913-122407](https://github.com/yuelin-wen/fragments-frontend/assets/102840218/dfe87dab-50c0-49df-84d8-2906b21c036e)
 
