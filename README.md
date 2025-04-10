@@ -30,7 +30,8 @@ A file is defined in the following formats:
 
 ## Project report
 
-https://github.com/yuelinwen/CloudVault/blob/b326b8a0ddcbd27a2226d3e515f4bd3799472f49/CloudVault-project-report.pdf
+Report URL: [Project report](https://github.com/yuelinwen/CloudVault/blob/b326b8a0ddcbd27a2226d3e515f4bd3799472f49/CloudVault-project-report.pdf)
+
 
 ## App Demo
 
