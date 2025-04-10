@@ -12,9 +12,9 @@ Introducing a cutting-edge cloud-based microservice meticulously designed to cat
 
 All of the data are stored and secured by AWS S3. The user pool is protected by AWS Cognito. The service is deployed in the AWS cloud.
 
-## Fragment supported type
+## File supported type
 
-A fragment is defined in the following formats:
+A file is defined in the following formats:
 
 | Name          | Type                | Extension |
 | ------------- | ------------------- | --------- |
@@ -26,6 +26,11 @@ A fragment is defined in the following formats:
 | JPEG Image    | `image/jpeg`        | `.jpg`    |
 | WebP Image    | `image/webp`        | `.webp`   |
 | GIF Image     | `image/gif`         | `.gif`    |
+
+
+## Project report
+
+https://github.com/yuelinwen/CloudVault/blob/b326b8a0ddcbd27a2226d3e515f4bd3799472f49/CloudVault-project-report.pdf
 
 ## App Demo
 
