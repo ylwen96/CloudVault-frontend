@@ -35,7 +35,7 @@ Report URL: [Project report](https://github.com/yuelinwen/CloudVault/blob/b326b8
 
 ## App Demo
 
-Youtube Link: https://youtu.be/gQXxX0mSVQc
+Youtube Link: [https://youtu.be/gQXxX0mSVQc](https://www.youtube.com/watch?v=9ruAMwIYXI0)
 
 (Hint: The user has to follow the AWS Cognito user authentication process, Please sign up with a real email to receive a verification code. You are also welcome to watch my demo presentation on YouTube)
 
