@@ -4,7 +4,7 @@ CloudVault front-end app
 
 ## Authors
 
-- [@Yuelin Wen](https://www.github.com/yuelin-wen)
+- [@Yuelin Wen](https://www.github.com/yuelinwen)
 
 ## Project Description
 
@@ -63,19 +63,20 @@ Install npm dependencies
 
 File list
 
-![image](https://github.com/yuelin-wen/fragments-frontend/assets/102840218/59961b03-f4ce-437a-9c01-53d25bf2ca72)
+<img width="1074" alt="WechatIMG32" src="https://github.com/user-attachments/assets/00973cf5-74fc-40ea-88ad-24bbda11164c" />
 
 Create File
 
-![WX20230913-122350](https://github.com/yuelin-wen/fragments-frontend/assets/102840218/c9e39091-11e3-41ae-b77a-c2b8349dbc2c)
+<img width="1070" alt="WechatIMG33" src="https://github.com/user-attachments/assets/75ff57ea-6208-4658-a6ab-bd492d5ce47a" />
 
 Read file (Update/Delete)
 
-![WX20230913-122407](https://github.com/yuelin-wen/fragments-frontend/assets/102840218/dfe87dab-50c0-49df-84d8-2906b21c036e)
+<img width="774" alt="WechatIMG34" src="https://github.com/user-attachments/assets/ad1614f8-a108-4cf0-a6a8-46f2f07d1bbb" />
+
 
 ## Contact
 
-If you have any questions, please feel free to email weny36@mcmaster.ca
+If you have any questions, please feel free to email wenyuelinca@gmail.com
 
 
 
