@@ -8,7 +8,11 @@ CloudVault front-end app
 
 ## Project Description
 
-Introducing a cutting-edge cloud-based microservice meticulously designed to cater to the needs of both companies and users seeking a robust system for efficient fragment data management. This sophisticated service empowers users with the essential functionalities of creating, reading, updating, and deleting fragments, thereby facilitating a comprehensive approach to handling fragmented data.
+CloudVault is a cloud-based file storage software that allows users to store and access various types of
+files from any device. Hosted on AWS infrastructure, it offers a seamless and secure file management
+system. CloudVault incorporates encryption, secure authentication, and access control mechanisms to
+protect user data. With a focus on convenience, security and sustainability, CloudVault software offers a
+modern and efficient cloud storage solution for users.
 
 All of the data are stored and secured by AWS S3. The user pool is protected by AWS Cognito. The service is deployed in the AWS cloud.
 
